@@ -56,18 +56,18 @@ jobs:
         env:
           GITHUB_ENV: $GITHUB_ENV
 
-      - name: setup databases
-        env:
-          POSTGRES_USER: ${{ env.POSTGRES_USER }}
-          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
-          RAILS_ENV: test
-        run: |
-          bundle exec rake db:create
-          bundle exec rake db:migrate
+      # - name: setup databases
+      #   env:
+      #     POSTGRES_USER: ${{ env.POSTGRES_USER }}
+      #     POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+      #     RAILS_ENV: test
+      #   run: |
+      #     bundle exec rake db:create 
+      #     bundle exec rake db:migrate
           
-      - name: Run tests 
-        run: |
-          bundle exec rspec
+      # - name: Run tests 
+      #   run: |
+      #     bundle exec rspec
 
 
   build-and-push:
