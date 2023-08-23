@@ -45,7 +45,6 @@ jobs:
           bundle install --jobs 4 --retry 3
           gem install selenium-webdriver -v 4.9.0
           bundle update rspec-rails
-          bundle update selenium-webdriver
 
       - name: Install postgres client
         run: sudo apt-get install libpq-dev
