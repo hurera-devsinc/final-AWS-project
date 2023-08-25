@@ -8,10 +8,7 @@ node {
     
     stage('Connect to EC2') {
         sshCommand remote: remote, command: '''
-            sudoyum update -y
-            sudo amazon-linux-extras install docker -y
-            sudo service docker start
-            sudo usermod -aG docker ec2-user
+            touch text.txt
         '''
     }
     
