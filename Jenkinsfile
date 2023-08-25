@@ -9,9 +9,9 @@ node {
     stage('Connect to EC2') {
         sshCommand remote: remote, command: '''
             yum update -y
-            sudo amazon-linux-extras install docker -y
-            sudo service docker start
-            sudo usermod -aG docker ec2-user
+            amazon-linux-extras install docker -y
+            service docker start
+            usermod -aG docker ec2-user
         '''
     }
     
