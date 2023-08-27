@@ -2,6 +2,13 @@ node {
     stage('Update EC2') {
         def remoteCommands = '''
             sudo yum update -y
+            sudo yum install -y docker
+            sudo systemctl start docker
+            sudo systemctl enable docker
+            sudo systemctl status docker
+            sudo usermod -aG docker $USER
+            newgrp docker
+            docker pull postgres
             echo "Commands completed."
         '''
 
