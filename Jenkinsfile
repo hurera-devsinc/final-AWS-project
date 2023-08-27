@@ -11,7 +11,7 @@ pipeline {
                             echo "Commands completed."
                         '''
 
-                        sh "ssh ec2-user@18.141.164.40 << EOF\n${remoteCommands}\nEOF"
+                        sh "ssh -o StrictHostKeyChecking=no ec2-user@18.141.164.40 << EOF\n${remoteCommands}\nEOF"
                     }
                 }
             }
