@@ -5,32 +5,22 @@ services:
     image: postgres:13
     volumes:
       - db_data:/var/lib/postgresql/data
-    # environment:
-    #   POSTGRES_USER: myapp_user
-    #   POSTGRES_PASSWORD: myapp_password
-    #   POSTGRES_DB: oms_api_development
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: oms_api_development
 
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: myapp
-    # image: hureradevsinc/rails-app:latest
+    image: hureradevsinc/aws-project:latest
     restart: always
     depends_on:
       - db
     ports:
       - 3000:3000
     volumes:
-      - .:/app
+      - .:/app/volume
     environment:
       DATABASE_URL: postgresql://postgres:postgres@db/oms_api_development
-    # command: >
-    #   sh -c 'rails server -b 0.0.0.0'
 
 volumes:
   db_data:
