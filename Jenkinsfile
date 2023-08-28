@@ -1,8 +1,7 @@
 node {
     stage('Update EC2') {
         def remoteCommands = '''
-            docker pull postgres
-            docker pull hureradevsinc/aws-project
+            docker pull hureradevsinc/aws-project:latest
             echo "Pipeline successful."
         '''
 
