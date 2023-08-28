@@ -31,3 +31,20 @@
 
 *.idea/
 *.DS_Store
+
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/*.tfplan
+terraform/terraform.log
+terraform/.terraformrc
+terraform/.terraformrc.json
+terraform/.terraform.lock.hcl
+terraform/*.pem
+terraform/*.key
+terraform/*.crt
+terraform/*.tfvars
+terraform/.env
+terraform/.DS_Store
