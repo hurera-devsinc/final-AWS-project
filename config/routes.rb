@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   root to: 'api/v1/products#index'
 
+  get '/health', to: proc {[200,{},['success']]}
+
   namespace :api, defaults: { format: 'json' } do
     namespace :v1 do
       resources :customers do
