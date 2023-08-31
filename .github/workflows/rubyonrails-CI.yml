@@ -67,10 +67,9 @@ jobs:
       - name: docker login
         run: | 
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          
-      
+           
       - name: Build the Docker image # push The image to the docker hub
-        run: docker build . --file Dockerfile --tag hureradevsinc/aws-project:latest
-        
+        run: docker build . --file ./docker/Dockerfile --tag hureradevsinc/aws-project:latest
+
       - name: Docker Push
         run: docker push hureradevsinc/aws-project:latest
