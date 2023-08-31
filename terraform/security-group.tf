@@ -1,6 +1,6 @@
 variable "your_ip" {
   description = "Your public IP address"
-  default     = "206.84.191.189/32"
+  default     = "111.68.97.202/32"
 }
 variable "jenkins_ip" {
   description = "Your public IP address"
