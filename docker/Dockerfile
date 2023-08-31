@@ -8,9 +8,10 @@ RUN apt-get update -y && apt-get install -y \
     nodejs
 
 COPY Gemfile Gemfile.lock ./
+
 RUN bundle install
 
-COPY . .
+COPY ./ .
 
 EXPOSE 3000
 
