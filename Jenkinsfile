@@ -1,7 +1,11 @@
 node {
     stage('Update EC2') {
         def remoteCommands = '''
+            cd application
+            docker-compose down
+            docker rmi hureradevsinc/aws-project:latest
             docker pull hureradevsinc/aws-project:latest
+            docker-compose up -d
             echo "Pipeline successful."
         '''
 
