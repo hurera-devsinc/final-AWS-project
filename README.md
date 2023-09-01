@@ -31,20 +31,6 @@ bundle exec rspec
 - Docker files: Dockerfiles and related configuration files are located in the `docker` folder.
 - Terraform files: Infrastructure provisioning using Terraform is defined in the `terraform` folder.
 
-## Building the Docker Image
-
-To build the Docker image for the application, follow these steps:
-
-1. Open a terminal and navigate to the root directory of the project.
-2. Run the following command to build the Docker image:
-
-   ```bash
-   docker build -t your-image-name .
-   ```
-Certainly! Here's the markdown code for the README file:
-
-markdown
-
 ## Project Structure
 
 - Docker files: Dockerfiles and related configuration files are located in the `docker` folder.
@@ -77,8 +63,6 @@ Follow these steps to run the application:
     docker-compose up
    ``` 
 
-
-## Jenkins file
 
 
 ## Terraform
